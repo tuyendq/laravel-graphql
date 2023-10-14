@@ -64,3 +64,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## MySQL on localhost (for development stage only)
+- Username: lavarelgraphql
+- DB name: lavarelgraphql
+- DB password: UT8evcG@Tv0hrYK
+
+```sql
+CREATE USER 'lavarelgraphql'@'%' IDENTIFIED VIA mysql_native_password USING '***';GRANT USAGE ON *.* TO 'lavarelgraphql'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;CREATE DATABASE IF NOT EXISTS `lavarelgraphql`;GRANT ALL PRIVILEGES ON `lavarelgraphql`.* TO 'lavarelgraphql'@'%';
+
+
+CREATE USER 'lavarelgraphql'@'localhost' IDENTIFIED BY 'UT8evcGTv0hrYK';GRANT USAGE ON *.* TO 'lavarelgraphql'@'%';GRANT ALL PRIVILEGES ON `lavarelgraphql`.* TO 'lavarelgraphql'@'%';
+
+```
